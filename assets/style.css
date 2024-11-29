@@ -80,7 +80,6 @@ input[type="text"]::placeholder {
   left: 2rem;
   color: #ff3333;
   font-size: 15px;
-  display: none;
 }
 
 .main-weather-display {
