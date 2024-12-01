@@ -1,6 +1,47 @@
 const form = document.querySelector("form");
 const submitBtn = document.querySelector(".submit-btn");
 const error = document.querySelector(".error-msg");
+const cityInput = document.getElementById("city-input");
+const datalist = document.getElementById("city-suggestions");
+
+cityInput.addEventListener("input", handleAutocomplete);
+
+async function handleAutocomplete(e) {
+  const query = e.target.value.trim();
+  if (query.length < 2) {
+    datalist.innerHTML = ""; // Clear suggestions for short queries
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?namePrefix=${query}&limit=5`,
+      {
+        headers: {
+          "X-RapidAPI-Key": "d81aaa942emshacb9d76cb7fb228p13167ejsn2e65bf11eb86",
+          "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
+        },
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch city suggestions");
+    }
+
+    const data = await response.json();
+    populateDatalist(data.data);
+  } catch (error) {
+    console.error("Error fetching city suggestions:", error);
+  }
+}
+
+function populateDatalist(cities) {
+  datalist.innerHTML = ""; // Clear old suggestions
+  cities.forEach((city) => {
+    const option = document.createElement("option");
+    option.value = `${city.name}, ${city.country}`;
+    datalist.appendChild(option);
+  });
+}
 
 form.addEventListener("submit", handleSubmit);
 submitBtn.addEventListener("click", handleSubmit);
