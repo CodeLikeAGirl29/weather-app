@@ -2,9 +2,9 @@
 
 A sleek and responsive weather application that uses the [OpenWeather API](https://openweathermap.org/api) to fetch real-time weather data based on user input. Built with **HTML**, **CSS**, and **JavaScript**, this project is ideal for users who want a simple yet powerful way to check weather conditions.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/60697a1d-547a-4df2-a3a7-ed2386fca0c9/deploy-status)](https://app.netlify.com/sites/openweather-search-api/deploys)
-
 > view project [here](https://openweather-search-api.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60697a1d-547a-4df2-a3a7-ed2386fca0c9/deploy-status)](https://app.netlify.com/sites/openweather-search-api/deploys)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/codelikeagirl29/weather-app/badge)](https://www.codefactor.io/repository/github/codelikeagirl29/weather-app)
 
