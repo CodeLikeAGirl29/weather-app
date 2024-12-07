@@ -6,6 +6,8 @@ A sleek and responsive weather application that uses the [OpenWeather API](https
 
 > view project [here](https://openweather-search-api.netlify.app/)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/codelikeagirl29/weather-app/badge)](https://www.codefactor.io/repository/github/codelikeagirl29/weather-app)
+
 ---
 
 ## 🚀 Features
