@@ -105,10 +105,18 @@ input[type="text"]::placeholder {
 }
 
 .degrees {
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 900;
   font-family: "Nunito", sans-serif;
-  position: relative;
+  position: absolute;
+  /* Changed to absolute for precise positioning */
+  top: 80%;
+  /* Adjust based on your design */
+  left: 5%;
+  /* Move the degrees further left */
+  text-align: left;
+  /* Align the text to the left */
+  transform: translateX(-10%);
 }
 
 .weather-details {
@@ -119,7 +127,7 @@ input[type="text"]::placeholder {
   letter-spacing: 0.1rem;
   position: absolute;
   border-left: 0.2rem solid rgba(255, 255, 255, 0.5);
-  top: 45%;
+  top: 104%;
   left: 22.5rem;
   height: 10rem;
   padding-left: 3.7rem;
